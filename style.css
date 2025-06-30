@@ -1,0 +1,376 @@
+/* Reset e estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo-circle img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.school-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-section {
+  text-align: center;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.content-image {
+  margin: 2rem 0;
+}
+
+.content-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.content-text {
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.content-text p {
+  margin-bottom: 1.5rem;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-item {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-5px);
+}
+
+.project-item h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+/* Footer */
+.footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+/* Estilos específicos por página */
+
+/* Página Inicial */
+.page-home .page-title {
+  color: #2c3e50;
+  background: linear-gradient(45deg, #3498db, #2c3e50);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Ensino Médio */
+.page-ensino-medio .page-title {
+  color: #e74c3c;
+}
+
+.page-ensino-medio .content-text {
+  border-left: 4px solid #e74c3c;
+  padding-left: 2rem;
+}
+
+/* Desenvolvimento de Sistemas */
+.page-desenvolvimento .page-title {
+  color: #27ae60;
+}
+
+.page-desenvolvimento .content-text {
+  background: linear-gradient(135deg, #f8f9fa, #e8f5e8);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 2px solid #27ae60;
+}
+
+/* Formação de Docentes */
+.page-docentes .page-title {
+  color: #8e44ad;
+}
+
+.page-docentes .content-text {
+  background: #f4f1f8;
+  padding: 2rem;
+  border-radius: 10px;
+  border-left: 5px solid #8e44ad;
+}
+
+/* Estética */
+.page-estetica .page-title {
+  color: #e91e63;
+  text-shadow: 2px 2px 4px rgba(233, 30, 99, 0.3);
+}
+
+.page-estetica .hero-section {
+  background: linear-gradient(135deg, #fce4ec, #f8bbd9);
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+/* Enfermagem */
+.page-enfermagem .page-title {
+  color: #00bcd4;
+}
+
+.page-enfermagem .content-text {
+  background: #e0f7fa;
+  padding: 2rem;
+  border-radius: 10px;
+  border: 2px solid #00bcd4;
+}
+
+/* Administração */
+.page-administracao .page-title {
+  color: #ff9800;
+}
+
+.page-administracao .content-text {
+  background: linear-gradient(135deg, #fff8e1, #ffecb3);
+  padding: 2rem;
+  border-radius: 10px;
+  border-left: 5px solid #ff9800;
+}
+
+/* Projetos */
+.page-projetos .page-title {
+  color: #9c27b0;
+}
+
+.page-projetos .project-item {
+  border-top: 4px solid #9c27b0;
+}
+
+/* Atividades */
+.page-atividades .page-title {
+  color: #607d8b;
+}
+
+.page-atividades .content-text strong {
+  color: #607d8b;
+  font-size: 1.2rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .main-nav ul {
+    justify-content: center;
+    gap: 0.3rem;
+  }
+
+  .main-nav a {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .school-name {
+    font-size: 1.5rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  .content-text {
+    font-size: 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-circle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo-circle img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .school-name {
+    font-size: 1.3rem;
+  }
+
+  .page-title {
+    font-size: 1.8rem;
+  }
+
+  .main-nav a {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-section {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.project-item {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus states para acessibilidade */
+.main-nav a:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .header,
+  .footer {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .content-image img {
+    max-width: 100%;
+    page-break-inside: avoid;
+  }
+}
